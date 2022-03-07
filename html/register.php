@@ -1,6 +1,7 @@
 <?php
 
 require_once('db.php');
+require_once('functions.php');
 
 if (isset($_POST['register_name'])) {
     // 名前の重複チェック
@@ -41,10 +42,10 @@ if (isset($_POST['register_name'])) {
           <input class="form-control" type=password name="register_password" value=<?= (isset($register_password) ? $register_password : '') ?>>
           <br>
           <input class="btn btn-primary" type=submit value="新規登録">
-          <p><?= (isset($msg) ? $msg : '') ?> </p>
         </form>
       </div>
     </div>
+    <p><?= (isset($msg) ? $msg : '') ?> </p>
     <p><a href="login.php">ログイン画面に戻る</a></p>
   </div>
 </body>

@@ -3,6 +3,7 @@
 session_start();
 
 require_once('db.php');
+require_once('functions.php');
 
  if (isset($_POST['login_name'])) {
     // 名前の重複チェック
@@ -26,7 +27,6 @@ require_once('db.php');
     /* ログインに失敗した */
     $msg = 'ログインに失敗しました';
 }
-
 ?>
 
 <!DOCTYPE html>
