@@ -21,7 +21,6 @@ if (isset($_POST['register_name'])) {
         }
     }
 }
-
 ?>
 
 <!DOCTYPE html>
