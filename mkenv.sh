@@ -15,3 +15,6 @@ PASSWORD=`pwmake --help`
 
 sed -i -e "s/{{MYSQL_ROOT_PASSWORD}}/${PASSWORD}/g" ${ENV_FILE_PATH}
 sed -i -e "s/{{MYSQL_ROOT_PASSWORD}}/${PASSWORD}/g" ${PHPDB_FILE_PATH}
+
+git update-index --assume-unchanged html/db.php
+git update-index --assume-unchanged .env
