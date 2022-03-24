@@ -32,11 +32,10 @@ function logout()
 if ($_POST) { /* POST Requests */
     if (isset($_POST['logout'])) { //ログアウト処理
         logout();
-        header("Location: login.php");
     } else if (isset($_POST['tweet_textarea'])) { //投稿処理
         newtweet($_POST['tweet_textarea']);
-        header("Location: index.php");
     }
+    header("Location: login.php");
 }
 
 $tweets = getTweets();
